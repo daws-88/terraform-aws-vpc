@@ -36,7 +36,7 @@ resource "aws_route" "private_peering" {
 }
 
 
-# we should add peering connection in default VPC main route table too
+# we should add peering connection in default VPC main route table 
 resource "aws_route" "default_peering" {
   count = var.is_peering_required ? 1 : 0
   route_table_id = data.aws_route_table.default.id
